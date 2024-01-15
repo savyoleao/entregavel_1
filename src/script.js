@@ -1,7 +1,37 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//ESCREVA SEU CÓDIGO AQUI!!
+function Calculadora(num1, num2, operador){
+  let numero1 = Number(num1);
+  let numero2 = Number(num2);
+  let resultado;
+
+  switch (operador){
+    case '+':
+      resultado = numero1 + numero2;
+      break;
+    case '-':
+      resultado = numero1 - numero2;
+      break;
+    case '/':
+      resultado = numero1 / numero2;
+      break;
+    case '*':
+      resultado = numero1 * numero2;
+      break;
+    case 'e':
+      resultado = 1;
+      for(let count = 0; count < numero2; count++){
+        resultado *= numero1;
+      }
+      break;
+  }
+  if(resultado == undefined || resultado > 1000000){
+    resultado = 'ERRO';
+  }
+
+  return resultado
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
